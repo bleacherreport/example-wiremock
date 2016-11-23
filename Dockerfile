@@ -14,6 +14,10 @@ RUN mkdir /$WM_PACKAGE
 WORKDIR /$WM_PACKAGE
 RUN curl -sSL -o $WM_PACKAGE.jar https://repo1.maven.org/maven2/com/github/tomakehurst/$WM_PACKAGE-standalone/$WM_VERSION/$WM_PACKAGE-standalone-$WM_VERSION.jar
 
+# add our custom routes
+ADD files /wiremock/__files
+ADD mappings /wiremock/mappings
+
 # This should match the exposed port in Dockerrun.aws.json
 EXPOSE 8080
 

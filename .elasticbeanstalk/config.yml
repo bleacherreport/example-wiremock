@@ -1,0 +1,9 @@
+branch-defaults:
+  master:
+    environment: example-wiremock
+global:
+  application_name: example-wiremock
+  default_platform: Docker 1.11.2
+  default_region: us-east-1
+  profile: null
+  sc: git
